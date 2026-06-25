@@ -96,7 +96,7 @@ Make sure the following are installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Tahir-mulani/spring-mvc-crud-app.git
+git clone https://github.com/Tahir-mulani/spring-mvc-lms-portal.git
 ```
 
 ### 2. Import into IDE
