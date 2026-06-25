@@ -178,7 +178,7 @@ This project demonstrates:
 **Tahir Mulani**
 
 - GitHub: https://github.com/Tahir-mulani
-- LinkedIn: Add your LinkedIn URL here
+- LinkedIn: https://www.linkedin.com/in/tahir-mulani-622152324/
 
 ---
 
