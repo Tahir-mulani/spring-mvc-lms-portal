@@ -1,5 +1,7 @@
 package com.mvc.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,11 @@ public class CourseService {
 	{
 		return courseRepository.isAddNewcourse(model);
 	}
- 
+	
+	public List<CourseModel> getAllCourses()
+	{
+		return courseRepository.getAllcourses();
+	}
 	
 	
 	

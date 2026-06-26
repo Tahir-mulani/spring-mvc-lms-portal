@@ -93,7 +93,7 @@ body {
 									class="bi bi-plus-circle me-2"></i> Add New Course
 							</a></li>
 
-							<li><a class="dropdown-item" href="viewCourse"> <i
+							<li><a class="dropdown-item" href="${pageContext.request.contextPath}/course/viewCourse"> <i
 									class="bi bi-eye me-2"></i> View Course
 							</a></li>
 						</ul></li>

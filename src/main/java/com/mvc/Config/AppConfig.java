@@ -12,30 +12,28 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= {"com.mvc"})
+@ComponentScan(basePackages = { "com.mvc" })
 public class AppConfig {
 	@Bean
-	public InternalResourceViewResolver getViewResolver()
-	{
+	public InternalResourceViewResolver getViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
-	
+
 	@Bean
-	public DriverManagerDataSource getDataSource()
-	{
+	public DriverManagerDataSource getDataSource() {
 		DriverManagerDataSource datasource = new DriverManagerDataSource();
 		datasource.setUrl("jdbc:mysql://localhost:3306/spring_mvc_crud_app");
 		datasource.setUsername("root");
 		datasource.setPassword("Pass@12345");
+		datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		return datasource;
 	}
-	
+
 	@Bean
-	public JdbcTemplate template()
-	{
+	public JdbcTemplate template() {
 		return new JdbcTemplate(getDataSource());
 	}
 }
