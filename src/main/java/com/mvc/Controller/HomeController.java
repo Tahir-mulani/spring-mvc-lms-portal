@@ -36,13 +36,16 @@ public class HomeController {
 		return "login";
 	}
 
-	@GetMapping("/addNewCourse")
-	public String addNewCourse() {
-
-		return "addCourse";
-
+	@GetMapping("/admin")
+	public String adminPage() {
+		return "adminDashBoard"; // adminDashBoard.jsp
 	}
-	
+
+	@GetMapping("/logout")
+	public String logout() {
+		return "index";
+	}
+
 	@GetMapping("/viewCourse")
 	public String viewCourse() {
 		return "viewCourse";

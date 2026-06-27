@@ -35,17 +35,38 @@ public class CourseRepository {
 	}
 
 	public List<CourseModel> getAllcourses() {
-		
-		list = template.query("SELECT*FROM course", new RowMapper<CourseModel>(){
-			 @Override
-	            public CourseModel mapRow(ResultSet rs, int rowNum) throws SQLException {
 
-	          
-	                CourseModel courseModel = new CourseModel(rs.getInt(1), rs.getString(2));
+		list = template.query("SELECT*FROM course", new RowMapper<CourseModel>() {
+			@Override
+			public CourseModel mapRow(ResultSet rs, int rowNum) throws SQLException {
 
-	                return courseModel;
-	            }	
-		});return list;
-}
+				CourseModel courseModel = new CourseModel(rs.getInt(1), rs.getString(2));
+
+				return courseModel;
+			}
+		});
+		return list;
+	}
+
+	public boolean deleteCourseById(int id) {
+		try {
+			template.update("delete from course where cid=?", id);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return true;
+
+	}
+
+	public void updateCourseName(CourseModel model) {
+		try {
+			template.update("update course set cname =? where cid=?", model.getCourse(), model.getCid());
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
 
 }

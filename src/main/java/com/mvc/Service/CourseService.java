@@ -10,22 +10,25 @@ import com.mvc.Repository.CourseRepository;
 
 @Service("courseService")
 public class CourseService {
-	
+
 	@Autowired
 	CourseRepository courseRepository;
-	
-	public boolean isAddNewCourse(CourseModel model)
-	{
+
+	public boolean isAddNewCourse(CourseModel model) {
 		return courseRepository.isAddNewcourse(model);
 	}
-	
-	public List<CourseModel> getAllCourses()
-	{
+
+	public List<CourseModel> getAllCourses() {
 		return courseRepository.getAllcourses();
 	}
-	
-	
-	
-	
+
+	public void deleteCourseById(int id) {
+		courseRepository.deleteCourseById(id);
+	}
+
+	public void updateCourseName(CourseModel model) {
+		courseRepository.updateCourseName(model);
+
+	}
 
 }

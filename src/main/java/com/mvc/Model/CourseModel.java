@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CourseModel {
-	private int id; 
+	private int cid; 
 	private String course; 
 
 }

@@ -68,7 +68,8 @@ body {
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 
-			<a class="navbar-brand fw-bold" href="#"> <i
+			<a class="navbar-brand fw-bold"
+				href="${pageContext.request.contextPath}/admin"> <i
 				class="bi bi-speedometer2 me-2"></i> Admin Dashboard
 			</a>
 
@@ -89,12 +90,14 @@ body {
 					</a>
 
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="addNewCourse"> <i
-									class="bi bi-plus-circle me-2"></i> Add New Course
+							<li><a class="dropdown-item"
+								href="${pageContext.request.contextPath}/course/addNewCourse">
+									<i class="bi bi-plus-circle me-2"></i> Add New Course
 							</a></li>
 
-							<li><a class="dropdown-item" href="${pageContext.request.contextPath}/course/viewCourse"> <i
-									class="bi bi-eye me-2"></i> View Course
+							<li><a class="dropdown-item"
+								href="${pageContext.request.contextPath}/course/viewCourse">
+									<i class="bi bi-eye me-2"></i> View Course
 							</a></li>
 						</ul></li>
 
@@ -153,9 +156,10 @@ body {
 				</ul>
 
 				<form class="d-flex">
-					<button class="btn btn-danger" type="submit">
-						<i class="bi bi-box-arrow-right me-1"></i>Logout
-					</button>
+					<a href="${pageContext.request.contextPath}/logout"
+						class="btn btn-danger"> <i class="bi bi-box-arrow-right me-1"></i>
+						Logout
+					</a>
 				</form>
 
 			</div>

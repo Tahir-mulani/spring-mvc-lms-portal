@@ -91,17 +91,16 @@ body {
 
 								<td>${tempcourse.course}</td>
 
-								<td>
-									<button class="btn btn-warning btn-sm btn-action">
-										<i class="bi bi-pencil-square"></i> Update
-									</button>
+								<td><a href="${pageContext.request.contextPath}/course/update?id=${tempcourse.cid}&course=${tempcourse.course}">
+										<i class="bi bi-pencil-square"></i>
+									</a>
 								</td>
 
-								<td>
-									<button class="btn btn-danger btn-sm btn-action">
-										<i class="bi bi-trash"></i> Delete
-									</button>
-								</td>
+								<td><a
+									href="${pageContext.request.contextPath}/course/delete?id=${tempcourse.cid}">
+
+										<i class="bi bi-trash"></i>
+								</a></td>
 
 							</tr>
 

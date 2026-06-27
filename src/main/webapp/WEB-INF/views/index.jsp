@@ -250,7 +250,7 @@ body {
 	<!-- Footer -->
 	<div class="footer">
 		<p class="mb-0">
-			© 2025 Learning Management System | All Rights Reserved
+			© 2026 Learning Management System | All Rights Reserved
 		</p>
 	</div>
 
